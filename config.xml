@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="kmrs.mobile.app" version="1.3.3" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Inbound App</name>
+    <description>
+        Inbound mobile app version
+    </description>
+    <author email="basti@codemywebapps.com" href="http://cordova.io">
+        codemywebapps.com
+    </author>
+    <icon src="icon.png" />
+    <content src="index.html" />
+    <preference name="orientation" value="portrait" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="permissions" value="none" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.5.3">
+        <param name="SENDER_ID" value="177726941936" />
+    </gap:plugin>
+    <gap:plugin name="cordova-plugin-device" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <gap:plugin name="cordova-plugin-geolocation" source="npm" />
+    <gap:plugin name="cordova-plugin-network-information" source="npm" />
+    <gap:plugin source="git" spec="https://github.com/rodrigo-martinezd/cordova-dialog-gps.git" />
+    <gap:splash src="splash.png" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="fullscreen" value="false" />
+    <access origin="*" />
+    <gap:config-file parent="/manifest" platform="android">
+        <supports-screens android:largeScreens="true" android:smallScreens="true" android:xlargeScreens="true" />
+        <application android:theme="@android:style/Theme.NoTitleBar">
+        </application>
+    </gap:config-file>
+    <engine name="browser" spec="~4.1.0" />
+    <engine name="android" spec="6.3.0" />
+</widget>
